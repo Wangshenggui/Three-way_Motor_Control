@@ -1,0 +1,9 @@
+[root@kevin ~]# cat .gitignore
+*.o
+*.d
+*.crf
+*.axf
+*.htm
+*.map
+*.lnp
+*.dep
