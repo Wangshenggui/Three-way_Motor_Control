@@ -18,11 +18,15 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
+#include "dma.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,7 +58,10 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+//∂¡»°ADC÷µ
+#define ADCNUM 200
+uint16_t ADC_Value[ADCNUM];
+uint32_t ADC_CH1,ADC_CH2;
 /* USER CODE END 0 */
 
 /**
@@ -86,8 +93,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
+  MX_ADC1_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+    HAL_ADC_Start_DMA(&hadc1,(uint32_t*)ADC_Value,ADCNUM);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -99,7 +109,20 @@ int main(void)
     /* USER CODE BEGIN 3 */
       
       HAL_GPIO_TogglePin(led_GPIO_Port,led_Pin);
-      HAL_Delay(50);
+      HAL_Delay(10);
+      
+      ADC_CH1=ADC_CH2=0;
+      for(uint16_t i=0;i<ADCNUM;i+=2)
+      {
+            ADC_CH1+=ADC_Value[i];
+          ADC_CH2+=ADC_Value[i+1];
+      }
+      ADC_CH1=ADC_CH1/(ADCNUM/2);
+      ADC_CH2=ADC_CH2/(ADCNUM/2);
+      
+      char str[100];
+      sprintf(str,"%d,%d\r\n",ADC_CH1,ADC_CH2);
+      HAL_UART_Transmit(&huart1,(uint8_t*)str,strlen(str),1000);
   }
   /* USER CODE END 3 */
 }
@@ -112,6 +135,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
@@ -138,6 +162,12 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+  PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV6;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
   }
