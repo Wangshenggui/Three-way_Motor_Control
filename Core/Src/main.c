@@ -121,7 +121,7 @@ int main(void)
         /* USER CODE BEGIN 3 */
 
         HAL_GPIO_TogglePin(led_GPIO_Port, led_Pin);
-        HAL_Delay(20);
+        HAL_Delay(10);
 
         GetADCValue();
         
