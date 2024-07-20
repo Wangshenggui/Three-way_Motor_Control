@@ -63,6 +63,12 @@ void Error_Handler(void);
 #define UD_In_GPIO_Port GPIOA
 #define LR_In_Pin GPIO_PIN_2
 #define LR_In_GPIO_Port GPIOA
+#define LR_PWM_Pin GPIO_PIN_6
+#define LR_PWM_GPIO_Port GPIOA
+#define Down_PWM_Pin GPIO_PIN_7
+#define Down_PWM_GPIO_Port GPIOA
+#define Up_PWM_Pin GPIO_PIN_0
+#define Up_PWM_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

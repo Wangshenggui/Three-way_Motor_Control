@@ -20,6 +20,7 @@
 #include "main.h"
 #include "adc.h"
 #include "dma.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -96,8 +97,17 @@ int main(void)
   MX_DMA_Init();
   MX_ADC1_Init();
   MX_USART1_UART_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
     HAL_ADC_Start_DMA(&hadc1,(uint32_t*)ADC_Value,ADCNUM);
+    
+    HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_3);
+    
+    TIM3->CCR1=10000;
+    TIM3->CCR2=10000;
+    TIM3->CCR3=10000;
   /* USER CODE END 2 */
 
   /* Infinite loop */
