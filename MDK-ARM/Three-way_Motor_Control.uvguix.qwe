@@ -77,25 +77,25 @@
       <flags>0</flags>
       <showCmd>1</showCmd>
       <MinPosition>
-        <xPos>-1</xPos>
-        <yPos>-1</yPos>
+        <xPos>-32000</xPos>
+        <yPos>-32000</yPos>
       </MinPosition>
       <MaxPosition>
         <xPos>-1</xPos>
         <yPos>-1</yPos>
       </MaxPosition>
       <NormalPosition>
-        <Top>108</Top>
-        <Left>-1833</Left>
-        <Right>-251</Right>
-        <Bottom>987</Bottom>
+        <Top>116</Top>
+        <Left>11</Left>
+        <Right>1593</Right>
+        <Bottom>995</Bottom>
       </NormalPosition>
     </WindowPosition>
     <MDIClientArea>
       <RegID>0</RegID>
       <MDITabState>
-        <Len>263</Len>
-        <Data>01000000040000000100000001000000010000000100000000000000020000000000000001000000010000000000000028000000280000000100000001000000000000000100000043463A5C323032332D31322D32394465736B746F705C4769744875625C54687265652D7761795F4D6F746F725F436F6E74726F6C5C436F72655C5372635C6D61696E2E6300000000066D61696E2E6300000000FFDC7800FFFFFFFF0100000010000000C5D4F200FFDC7800BECEA100F0A0A100BCA8E1009CC1B600F7B88600D9ADC200A5C2D700B3A6BE00EAD6A300F6FA7D00B5E99D005FC3CF00C1838300CACAD500010000000000000002000000D3F9FFFFDA000000FDFEFFFF2C030000</Data>
+        <Len>655</Len>
+        <Data>01000000040000000100000001000000010000000100000000000000020000000000000001000000010000000000000028000000280000000100000005000000000000000100000043463A5C323032332D31322D32394465736B746F705C4769744875625C54687265652D7761795F4D6F746F725F436F6E74726F6C5C436F72655C5372635C6D61696E2E6300000000066D61696E2E6300000000FFDC7800FFFFFFFF47463A5C323032332D31322D32394465736B746F705C4769744875625C54687265652D7761795F4D6F746F725F436F6E74726F6C5C4D444B2D41524D5C4150505C616463696E2E630000000007616463696E2E6300000000BCA8E100FFFFFFFF47463A5C323032332D31322D32394465736B746F705C4769744875625C54687265652D7761795F4D6F746F725F436F6E74726F6C5C4D444B2D41524D5C4150505C616463696E2E680000000007616463696E2E6800000000BECEA100FFFFFFFF49463A5C323032332D31322D32394465736B746F705C4769744875625C54687265652D7761795F4D6F746F725F436F6E74726F6C5C4D444B2D41524D5C4150505C6164635F70776D2E6300000000096164635F70776D2E6300000000F0A0A100FFFFFFFF49463A5C323032332D31322D32394465736B746F705C4769744875625C54687265652D7761795F4D6F746F725F436F6E74726F6C5C4D444B2D41524D5C4150505C6164635F70776D2E6800000000096164635F70776D2E6800000000BCA8E100FFFFFFFF0100000010000000C5D4F200FFDC7800BECEA100F0A0A100BCA8E1009CC1B600F7B88600D9ADC200A5C2D700B3A6BE00EAD6A300F6FA7D00B5E99D005FC3CF00C1838300CACAD50001000000000000000200000007010000E20000003106000034030000</Data>
       </MDITabState>
     </MDIClientArea>
     <ViewEx>
@@ -1464,7 +1464,7 @@
       <Window>
         <RegID>50013</RegID>
         <PaneID>50013</PaneID>
-        <IsVisible>0</IsVisible>
+        <IsVisible>1</IsVisible>
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
@@ -1474,11 +1474,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000010020000</Data>
+          <Data>B4040000F9000000A005000014010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>560000006D0000004601000038010000</Data>
+          <Data>0A0000000A0000006E0000006E000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1494,17 +1494,17 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000010020000</Data>
+          <Data>160000004F030000160000004F030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>560000006D0000004601000038010000</Data>
+          <Data>0A0000000A0000006E0000006E000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
         <RegID>50015</RegID>
         <PaneID>50015</PaneID>
-        <IsVisible>0</IsVisible>
+        <IsVisible>1</IsVisible>
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
@@ -1514,11 +1514,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000010020000</Data>
+          <Data>14000000C3020000A0050000DE020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>560000006D0000004601000038010000</Data>
+          <Data>0A0000000A0000006E0000006E000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1749,10 +1749,46 @@
       <ActiveTab>0</ActiveTab>
       <Doc>
         <Name>../Core/Src/main.c</Name>
-        <ColumnNumber>4</ColumnNumber>
-        <TopLine>88</TopLine>
-        <CurrentLine>103</CurrentLine>
+        <ColumnNumber>8</ColumnNumber>
+        <TopLine>114</TopLine>
+        <CurrentLine>131</CurrentLine>
         <Folding>1</Folding>
+        <ContractedFolders></ContractedFolders>
+        <PaneID>0</PaneID>
+      </Doc>
+      <Doc>
+        <Name>.\APP\adcin.c</Name>
+        <ColumnNumber>8</ColumnNumber>
+        <TopLine>2</TopLine>
+        <CurrentLine>5</CurrentLine>
+        <Folding>1</Folding>
+        <ContractedFolders></ContractedFolders>
+        <PaneID>0</PaneID>
+      </Doc>
+      <Doc>
+        <Name>APP\adcin.h</Name>
+        <ColumnNumber>16</ColumnNumber>
+        <TopLine>1</TopLine>
+        <CurrentLine>12</CurrentLine>
+        <Folding>1</Folding>
+        <ContractedFolders></ContractedFolders>
+        <PaneID>0</PaneID>
+      </Doc>
+      <Doc>
+        <Name>.\APP\adc_pwm.c</Name>
+        <ColumnNumber>0</ColumnNumber>
+        <TopLine>1</TopLine>
+        <CurrentLine>8</CurrentLine>
+        <Folding>0</Folding>
+        <ContractedFolders></ContractedFolders>
+        <PaneID>0</PaneID>
+      </Doc>
+      <Doc>
+        <Name>.\APP\adc_pwm.h</Name>
+        <ColumnNumber>12</ColumnNumber>
+        <TopLine>1</TopLine>
+        <CurrentLine>9</CurrentLine>
+        <Folding>0</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
       </Doc>
