@@ -19,7 +19,7 @@
 
 //输出阈值
 #define OutputMaximum   1940
-#define OutputMinimum   1100
+#define OutputMinimum   1000
 
 //滤波系数
 #define ALPHA 0.5f
